@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import * as AlertDialog from "@radix-ui/react-alert-dialog";
+// import * as AlertDialog from "@radix-ui/react-alert-dialog";
 
-export default ({ onClickYes }) => {
+const AlertDialog = ({ onClickYes }) => {
   const [open, setOpen] = useState(false);
   return (
     <AlertDialog.Root open={open} onOpenChange={setOpen}>
       <AlertDialog.Trigger asChild>
-        <button className="inline-flex h-[35px] items-center justify-center text-sm leading-none btn-red
+        <button
+          className="inline-flex h-[35px] items-center justify-center text-sm leading-none btn-red
 
-outline-none hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black hover:text-black ">
+outline-none hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black hover:text-black "
+        >
           Delete
         </button>
       </AlertDialog.Trigger>
@@ -43,4 +45,4 @@ outline-none hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black hover:t
   );
 };
 
-// export default AlertDialog;
+export default AlertDialog;
