@@ -211,13 +211,13 @@ export default function Categories() {
                             <span>Edit</span>
                           </button>
 
-                          <AlertDialog
+                          {/* <AlertDialog
                             onClickYes={() =>
                               (function (id) {
                                 handleDeleteCategory(id);
                               })(id)
                             }
-                          />
+                          /> */}
                         </td>
                       </tr>
                     );
