@@ -6,6 +6,7 @@ import { signIn } from "next-auth/react";
 
 const adminEmails = ["eadwinezhao@gmail.com", "brianzhao@gmail.com"];
 export const authOptions = {
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     // OAuth authentication providers...
 
@@ -32,10 +33,10 @@ export const authOptions = {
         return false;
       }
     },
-    async session({ session, token, user }) {
-      console.log(session,token,user,session?.sessionToken)
-      return session;
-    }
+    // async session({ session, token, user }) {
+    //   console.log(session,token,user,session?.sessionToken)
+    //   return session;
+    // }
   },
 };
 export default NextAuth(authOptions);
